@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body{
+    /* display: flex; */
+    background: url(background.jpg) fixed center center no-repeat;
+    background-size: cover;
+}
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #472ab179;
+     /* Apply blur effect */
+    padding: 0 20px;
+}
+
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Smooth text effect */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links a:hover {
+    color: #ca0ab1;
+    font-weight: bold;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Burger menu styling */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 250px; /* Set a fixed width */
+        position: absolute;
+        top: 60px;
+        right: 0; /* Align to the right */
+        backdrop-filter: blur(10px); /* Apply blur effect */
+        height: 100vh; /* Full height */
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+        align-items: center;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20%;
+    text-decoration: underline;
+}
+h3{
+    color: rgb(240, 255, 106);
+    text-align: center;
+}
+
+
